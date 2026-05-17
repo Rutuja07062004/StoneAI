@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { getToken } from './authStorage';
 
-// Replace with your actual backend URL
-// Use your machine's IP address if testing on a physical device or emulator
-const BASE_URL = 'http://192.168.0.107:5000/api';
+const BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: BASE_URL,

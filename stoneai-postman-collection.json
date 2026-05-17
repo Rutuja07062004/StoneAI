@@ -1,0 +1,233 @@
+{
+  "info": {
+    "name": "StoneAI API",
+    "_postman_id": "stoneai-collection-2026",
+    "description": "Complete API collection for StoneAI Backend — Auth + Minerals endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "🔐 Auth",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rutuja Sawant\",\n  \"email\": \"rutuja@gmail.com\",\n  \"password\": \"secret123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/auth/register",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "auth", "register"]
+            },
+            "description": "Register a new user. Returns JWT token + user info."
+          }
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"rutuja@gmail.com\",\n  \"password\": \"secret123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/auth/login",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "auth", "login"]
+            },
+            "description": "Login with email and password. Returns JWT token."
+          }
+        },
+        {
+          "name": "Get My Profile (Protected)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}", "description": "Paste your JWT token here" }
+            ],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/auth/profile",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "auth", "profile"]
+            },
+            "description": "Protected route. Requires Bearer token in Authorization header."
+          }
+        }
+      ]
+    },
+    {
+      "name": "💎 Minerals",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/health",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "health"]
+            },
+            "description": "Check if the backend server is running."
+          }
+        },
+        {
+          "name": "Get All Minerals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals?page=1&limit=20",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "20" }
+              ]
+            },
+            "description": "Returns paginated list of all minerals."
+          }
+        },
+        {
+          "name": "Get Trending Minerals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/trending",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "trending"]
+            },
+            "description": "Returns all minerals where trending=true."
+          }
+        },
+        {
+          "name": "Search Minerals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/search?q=quartz",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "search"],
+              "query": [
+                { "key": "q", "value": "quartz", "description": "Change this to search anything" }
+              ]
+            },
+            "description": "Search minerals by name, category, or description. Case-insensitive."
+          }
+        },
+        {
+          "name": "Category — Crystals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/category/Crystals",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "category", "Crystals"]
+            }
+          }
+        },
+        {
+          "name": "Category — Gemstones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/category/Gemstones",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "category", "Gemstones"]
+            }
+          }
+        },
+        {
+          "name": "Category — Igneous",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/category/Igneous",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "category", "Igneous"]
+            }
+          }
+        },
+        {
+          "name": "Category — Sedimentary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/category/Sedimentary",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "category", "Sedimentary"]
+            }
+          }
+        },
+        {
+          "name": "Category — Metamorphic",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/category/Metamorphic",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "category", "Metamorphic"]
+            }
+          }
+        },
+        {
+          "name": "Get Mineral by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.107:5000/api/minerals/PASTE_ID_HERE",
+              "protocol": "http",
+              "host": ["192", "168", "0", "107"],
+              "port": "5000",
+              "path": ["api", "minerals", "PASTE_ID_HERE"]
+            },
+            "description": "Replace PASTE_ID_HERE with a real MongoDB _id from any mineral."
+          }
+        }
+      ]
+    }
+  ]
+}

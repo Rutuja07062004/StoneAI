@@ -35,27 +35,19 @@ import {
   Info,
   DollarSign,
   Box,
-  Lightbulb
+  Lightbulb,
+  Gem
 } from 'lucide-react-native';
 import { mineralService } from '../../services/mineralService';
+import { mineralApiService } from '../../services/mineralApiService';
 import { Mineral } from '../../types/mineral';
 import { COLORS, SIZES, SHADOWS } from '../../constants/theme';
-import { getMineralImage } from '../../constants/mineralImages';
+import { getMineralImage } from '../../utils/getMineralImage';
 
 const { width } = Dimensions.get('window');
 const HEADER_HEIGHT = 450;
 
-const getMineralTint = (name: string): string | undefined => {
-  const n = name.toLowerCase();
-  if (n.includes('amethyst')) return 'rgba(155, 89, 182, 0.4)';
-  if (n.includes('ruby')) return 'rgba(231, 76, 60, 0.4)';
-  if (n.includes('sapphire')) return 'rgba(52, 152, 219, 0.4)';
-  if (n.includes('emerald')) return 'rgba(46, 204, 113, 0.4)';
-  if (n.includes('rose quartz')) return 'rgba(255, 192, 203, 0.4)';
-  if (n.includes('citrine')) return 'rgba(241, 196, 15, 0.3)';
-  if (n.includes('obsidian')) return 'rgba(0, 0, 0, 0.5)';
-  return undefined;
-};
+
 
 export default function MineralDetailScreen() {
   const router = useRouter();
@@ -73,14 +65,19 @@ export default function MineralDetailScreen() {
   }, [id]);
 
   const loadMineral = async () => {
-    const data = await mineralService.getMineralById(id);
-    if (data) {
-      setMineral(data);
-      const isFav = await mineralService.isFavorite(id);
-      setIsFavorite(isFav);
-      
-      const all = await mineralService.getAllMinerals();
-      setRelatedMinerals(all.filter(m => m.id !== id && m.category === data.category).slice(0, 5));
+    try {
+      const data = await mineralApiService.getMineralById(id);
+      if (data) {
+        setMineral(data);
+        const isFav = await mineralService.isFavorite(id);
+        setIsFavorite(isFav);
+        
+        // Use API to get related minerals
+        const related = await mineralApiService.getMineralsByCategory(data.category);
+        setRelatedMinerals(related.filter(m => m.id !== id).slice(0, 5));
+      }
+    } catch (error) {
+      console.error('Failed to load mineral details:', error);
     }
   };
 
@@ -135,6 +132,26 @@ export default function MineralDetailScreen() {
     </View>
   );
 
+  const localAsset = getMineralImage(mineral.category, mineral.imageKey);
+
+  const getCategoryGradient = (category: string): readonly [string, string, string] => {
+    switch (category) {
+      case 'Crystals': return ['#1a0b2e', '#4b1d52', '#050505'];
+      case 'Minerals': return ['#1f1f1f', '#383838', '#050505'];
+      case 'Gemstones': return ['#3a0f14', '#8b1c31', '#050505'];
+      case 'Igneous Rocks':
+      case 'Igneous': return ['#110a08', '#2b1510', '#050505'];
+      case 'Sedimentary Rocks':
+      case 'Sedimentary': return ['#2b1d14', '#4a3219', '#050505'];
+      case 'Metamorphic Rocks':
+      case 'Metamorphic': return ['#0c1b26', '#1a364d', '#050505'];
+      default: return ['#1A1A1A', '#333333', '#050505'];
+    }
+  };
+
+  const gradient = getCategoryGradient(mineral.category);
+  const initials = mineral.name.substring(0, 2).toUpperCase();
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -148,11 +165,20 @@ export default function MineralDetailScreen() {
         {/* Hero Section */}
         <View style={styles.heroWrapper}>
           <Animated.View style={[styles.heroContainer, headerImageStyle]}>
-            <Image 
-              source={getMineralImage(mineral.imageKey)} 
-              style={styles.heroImage} 
-              resizeMode="cover" 
-            />
+            {localAsset ? (
+              <Image 
+                source={localAsset} 
+                style={styles.heroImage} 
+                resizeMode="cover"
+              />
+            ) : (
+              <LinearGradient colors={gradient} style={[styles.heroImage, { justifyContent: 'center', alignItems: 'center' }]}>
+                <Text style={{ color: 'rgba(255,255,255,0.05)', fontSize: 120, fontWeight: '900', position: 'absolute' }}>
+                  {initials}
+                </Text>
+                <Gem size={80} color="rgba(255,255,255,0.4)" />
+              </LinearGradient>
+            )}
             <LinearGradient
               colors={['rgba(0,0,0,0.4)', 'transparent', 'rgba(5,5,5,1)']}
               style={StyleSheet.absoluteFill}
@@ -265,20 +291,33 @@ export default function MineralDetailScreen() {
                 showsHorizontalScrollIndicator={false} 
                 contentContainerStyle={styles.relatedScroll}
               >
-                {relatedMinerals.map((m, index) => (
-                  <TouchableOpacity 
-                    key={m.id} 
-                    onPress={() => router.push({ pathname: '/guide/[id]', params: { id: m.id } })}
-                    style={styles.relatedCard}
-                  >
-                    <Image 
-                      source={getMineralImage(m.imageKey)} 
-                      style={styles.relatedImg} 
-                      resizeMode="cover" 
-                    />
-                    <Text style={styles.relatedName} numberOfLines={1}>{m.name}</Text>
-                  </TouchableOpacity>
-                ))}
+                {relatedMinerals.map((m, index) => {
+                  const mLocalAsset = getMineralImage(m.category, m.imageKey);
+                  const mInitials = m.name.substring(0, 2).toUpperCase();
+                  const mGradient = getCategoryGradient(m.category).slice(0, 2) as [string, string];
+                  
+                  return (
+                    <TouchableOpacity 
+                      key={m.id} 
+                      onPress={() => router.push({ pathname: '/guide/[id]', params: { id: m.id } })}
+                      style={styles.relatedCard}
+                    >
+                      {mLocalAsset ? (
+                        <Image 
+                          source={mLocalAsset} 
+                          style={styles.relatedImg} 
+                          resizeMode="cover" 
+                        />
+                      ) : (
+                        <LinearGradient colors={mGradient} style={[styles.relatedImg, { justifyContent: 'center', alignItems: 'center' }]}>
+                           <Text style={{ color: 'rgba(255,255,255,0.1)', fontSize: 32, fontWeight: '900', position: 'absolute' }}>{mInitials}</Text>
+                           <Gem size={24} color="rgba(255,255,255,0.5)" />
+                        </LinearGradient>
+                      )}
+                      <Text style={styles.relatedName} numberOfLines={1}>{m.name}</Text>
+                    </TouchableOpacity>
+                  );
+                })}
               </ScrollView>
             </View>
           )}

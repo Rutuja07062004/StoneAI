@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Mineral, MineralCategory } from '../types/mineral';
 import { mineralService } from '../services/mineralService';
-import { MINERALS } from '../data/minerals';
+import { mineralApiService } from '../services/mineralApiService';
 
 const CATEGORIES: (MineralCategory | 'All')[] = [
   'All',
@@ -17,6 +17,7 @@ export const useMinerals = () => {
   const [minerals, setMinerals] = useState<Mineral[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<MineralCategory | 'All'>('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -34,13 +35,17 @@ export const useMinerals = () => {
 
   const loadData = async () => {
     setLoading(true);
+    setError(null);
     try {
-      // Use local MINERALS as the base data
-      const favs = await mineralService.getFavorites();
-      setMinerals(MINERALS as any);
+      const [fetchedMinerals, favs] = await Promise.all([
+        mineralApiService.getAllMinerals(),
+        mineralService.getFavorites(),
+      ]);
+      setMinerals(fetchedMinerals);
       setFavorites(favs);
-    } catch (error) {
-      console.error('Error loading minerals:', error);
+    } catch (err: any) {
+      console.error('Error loading minerals from API:', err?.message);
+      setError('Could not connect to server.');
     } finally {
       setLoading(false);
     }
@@ -53,25 +58,27 @@ export const useMinerals = () => {
 
   const filteredMinerals = useMemo(() => {
     return minerals.filter(mineral => {
-      const matchesSearch = 
+      const matchesSearch =
+        !searchQuery ||
         mineral.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         mineral.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         mineral.type.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      const matchesCategory = selectedCategory === 'All' || mineral.category === selectedCategory;
-      
-      const matchesRarity = 
-        activeFilters.rarity.length === 0 || 
+
+      const matchesCategory =
+        selectedCategory === 'All' || mineral.category === selectedCategory;
+
+      const matchesRarity =
+        activeFilters.rarity.length === 0 ||
         activeFilters.rarity.includes(mineral.rarity);
-      
-      const matchesHardness = 
-        activeFilters.hardness.length === 0 || 
+
+      const matchesHardness =
+        activeFilters.hardness.length === 0 ||
         activeFilters.hardness.some(range => {
           const [min, max] = range.split('-').map(Number);
           const val = parseFloat(mineral.hardness);
           return val >= min && (max ? val <= max : true);
         });
-      
+
       return matchesSearch && matchesCategory && matchesRarity && matchesHardness;
     });
   }, [minerals, searchQuery, selectedCategory, activeFilters]);
@@ -102,6 +109,7 @@ export const useMinerals = () => {
     favoriteMinerals,
     favorites,
     loading,
+    error,
     searchQuery,
     setSearchQuery,
     selectedCategory,
@@ -113,6 +121,6 @@ export const useMinerals = () => {
     resetFilters,
     toggleFavorite,
     categories: CATEGORIES,
-    refresh: loadData
+    refresh: loadData,
   };
 };

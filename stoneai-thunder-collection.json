@@ -1,0 +1,230 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "StoneAI API",
+  "collectionId": "stoneai-api-collection-001",
+  "dateExported": "2026-05-16",
+  "version": "1.2",
+  "folders": [
+    {
+      "id": "folder-auth",
+      "name": "🔐 Auth",
+      "containerId": ""
+    },
+    {
+      "id": "folder-minerals",
+      "name": "💎 Minerals",
+      "containerId": ""
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-001",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-auth",
+      "name": "Register User",
+      "url": "http://192.168.0.107:5000/api/auth/register",
+      "method": "POST",
+      "sortNum": 1,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Rutuja Sawant\",\n  \"email\": \"rutuja@gmail.com\",\n  \"password\": \"secret123\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "id": "req-002",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-auth",
+      "name": "Login User",
+      "url": "http://192.168.0.107:5000/api/auth/login",
+      "method": "POST",
+      "sortNum": 2,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"rutuja@gmail.com\",\n  \"password\": \"secret123\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "id": "req-003",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-auth",
+      "name": "Get Profile (Protected)",
+      "url": "http://192.168.0.107:5000/api/auth/profile",
+      "method": "GET",
+      "sortNum": 3,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer YOUR_JWT_TOKEN_HERE"
+        }
+      ],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-004",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get All Minerals",
+      "url": "http://192.168.0.107:5000/api/minerals",
+      "method": "GET",
+      "sortNum": 4,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "params": [
+        { "name": "page", "value": "1" },
+        { "name": "limit", "value": "20" }
+      ],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-005",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get Trending Minerals",
+      "url": "http://192.168.0.107:5000/api/minerals/trending",
+      "method": "GET",
+      "sortNum": 5,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-006",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Search Minerals",
+      "url": "http://192.168.0.107:5000/api/minerals/search",
+      "method": "GET",
+      "sortNum": 6,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "params": [
+        { "name": "q", "value": "quartz" }
+      ],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-007",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get Minerals by Category — Crystals",
+      "url": "http://192.168.0.107:5000/api/minerals/category/Crystals",
+      "method": "GET",
+      "sortNum": 7,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-007b",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get Minerals by Category — Gemstones",
+      "url": "http://192.168.0.107:5000/api/minerals/category/Gemstones",
+      "method": "GET",
+      "sortNum": 8,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-007c",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get Minerals by Category — Igneous",
+      "url": "http://192.168.0.107:5000/api/minerals/category/Igneous",
+      "method": "GET",
+      "sortNum": 9,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-008",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Get Mineral by ID",
+      "url": "http://192.168.0.107:5000/api/minerals/PASTE_MINERAL_ID_HERE",
+      "method": "GET",
+      "sortNum": 10,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    },
+    {
+      "id": "req-009",
+      "colId": "stoneai-api-collection-001",
+      "containerId": "folder-minerals",
+      "name": "Health Check",
+      "url": "http://192.168.0.107:5000/api/health",
+      "method": "GET",
+      "sortNum": 11,
+      "created": "2026-05-16",
+      "modified": "2026-05-16",
+      "headers": [],
+      "body": {
+        "type": "none",
+        "raw": ""
+      },
+      "tests": []
+    }
+  ]
+}

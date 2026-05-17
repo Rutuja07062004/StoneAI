@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { View, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Platform, Text } from 'react-native';
 import { COLORS } from '@/constants/theme';
 import { Home, Compass, FolderHeart, User, Scan } from 'lucide-react-native';
 import { BlurView } from 'expo-blur';
@@ -13,8 +13,13 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
         tabBarStyle: styles.tabBar,
+        tabBarLabelStyle: {
+          fontSize: 11,
+          fontWeight: '600',
+          marginTop: -4,
+        },
         tabBarBackground: () => (
           Platform.OS === 'ios' ? (
             <BlurView intensity={30} tint="dark" style={StyleSheet.absoluteFill} />
@@ -45,23 +50,19 @@ export default function TabLayout() {
       <Tabs.Screen
         name="scan_placeholder"
         options={{
-          tabBarButton: ({ children, onPress, ...props }) => {
+          title: 'Scan',
+          tabBarIcon: ({ color }: { color: string }) => <Scan size={24} color={color} />,
+          tabBarButton: (props) => {
             // Sanitize props to avoid null vs undefined conflicts in TouchableOpacity
-            const { delayLongPress, ...safeProps } = props as any;
+            const { delayLongPress, onPress, ...safeProps } = props as any;
             return (
               <TouchableOpacity
+                {...safeProps}
+                activeOpacity={0.8}
                 onPress={(e) => {
                   router.push('/scan');
-                  onPress?.(e);
                 }}
-                style={styles.scanButtonContainer}
-                activeOpacity={0.8}
-                {...safeProps}
-              >
-                <View style={styles.scanButton}>
-                  <Scan size={30} color={COLORS.background} />
-                </View>
-              </TouchableOpacity>
+              />
             );
           },
         }}
@@ -98,22 +99,5 @@ const styles = StyleSheet.create({
     elevation: 20,
     paddingBottom: Platform.OS === 'ios' ? 25 : 10,
   },
-  scanButtonContainer: {
-    top: Platform.OS === 'ios' ? -35 : -30,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  scanButton: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: COLORS.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: COLORS.primary,
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.5,
-    shadowRadius: 15,
-    elevation: 8,
-  },
+
 });
