@@ -5,10 +5,31 @@ import { useRouter, useFocusEffect } from 'expo-router';
 import { COLORS, SIZES } from '@/constants/theme';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Search, Filter, LayoutGrid, List, Plus, TrendingUp, Trophy, Gem, Sparkles, AlertCircle, MapPin } from 'lucide-react-native';
+import { Search, Filter, LayoutGrid, List, Plus, Gem, Sparkles, AlertCircle, MapPin } from 'lucide-react-native';
 import { storageService, CollectionItem } from '@/services/storageService';
+import { getMineralImage } from '@/utils/getMineralImage';
 
 const { width } = Dimensions.get('window');
+
+interface SafeImageProps {
+  uri: string;
+  name: string;
+  style: any;
+}
+
+const SafeImage: React.FC<SafeImageProps> = ({ uri, name, style }) => {
+  const [hasError, setHasError] = useState(false);
+  const fallbackAsset = getMineralImage('Minerals', 'placeholder', false, name);
+
+  return (
+    <Image
+      source={hasError || !uri ? fallbackAsset : { uri }}
+      style={style}
+      contentFit="cover"
+      onError={() => setHasError(true)}
+    />
+  );
+};
 
 export default function CollectionScreen() {
   const router = useRouter();
@@ -40,10 +61,6 @@ export default function CollectionScreen() {
     setFilteredItems(filtered);
   }, [searchQuery, items]);
 
-  const totalValue = items.reduce((acc, item) => {
-    const val = parseInt(item.value.replace(/[^0-9]/g, '')) || 0;
-    return acc + val;
-  }, 0);
 
   if (isLoading) {
     return (
@@ -71,34 +88,23 @@ export default function CollectionScreen() {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
-        {/* Collection Stats */}
-        <View style={styles.statsRow}>
-          <GlassCard style={styles.statCard}>
-            <Trophy size={20} color={COLORS.primary} />
-            <Text style={styles.statValue}>{items.length}</Text>
-            <Text style={styles.statLabel}>Specimens</Text>
-          </GlassCard>
-          <GlassCard style={styles.statCard}>
-            <TrendingUp size={20} color={COLORS.success} />
-            <Text style={styles.statValue}>${(totalValue / 1000).toFixed(1)}k</Text>
-            <Text style={styles.statLabel}>Est. Value</Text>
-          </GlassCard>
-        </View>
 
         {/* Search & Filter */}
         <View style={styles.searchRow}>
-          <GlassCard style={styles.searchBar}>
-            <Search size={18} color={COLORS.textSecondary} />
-            <TextInput
-              placeholder="Search your vault..."
-              placeholderTextColor={COLORS.textMuted}
-              style={styles.searchInput}
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-            />
+          <GlassCard style={styles.searchBar} padding={0} borderRadius={12}>
+            <View style={styles.searchInner}>
+              <Search size={18} color={COLORS.textSecondary} />
+              <TextInput
+                placeholder="Search your vault..."
+                placeholderTextColor={COLORS.textMuted}
+                style={styles.searchInput}
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+              />
+            </View>
           </GlassCard>
           <TouchableOpacity style={styles.filterBtn}>
-            <Filter size={20} color={COLORS.text} />
+            <Filter size={18} color={COLORS.text} />
           </TouchableOpacity>
         </View>
 
@@ -142,29 +148,37 @@ export default function CollectionScreen() {
                   onPress={() => router.push({ pathname: '/collection/[id]', params: { id: item.id } })}
                 >
                   <GlassCard style={styles.card} padding={0}>
-                    <Image 
-                      source={{ uri: item.imageUri }} 
+                    <SafeImage 
+                      uri={item.imageUri} 
+                      name={item.name} 
                       style={viewMode === 'grid' ? styles.cardImage : styles.listImage} 
-                      contentFit="cover"
                     />
-                    <View style={styles.cardInfo}>
-                      <Text style={styles.cardName} numberOfLines={1}>{item.name}</Text>
-                      <View style={styles.cardMeta}>
-                        <Text style={styles.cardType}>{item.structure} Sys.</Text>
-                        <View style={styles.dot} />
-                        <Text style={styles.cardDate}>
-                          {new Date(item.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
-                        </Text>
-                      </View>
-                      
-                      {item.location?.address && (
-                        <View style={styles.locationRow}>
-                          <MapPin size={10} color={COLORS.primary} />
-                          <Text style={styles.locationText} numberOfLines={1}>
-                            {item.location.city || item.location.address}
+                    <View style={[styles.cardInfo, viewMode === 'grid' && styles.gridCardInfo]}>
+                      <View>
+                        <Text style={styles.cardName} numberOfLines={1}>{item.name}</Text>
+                        <View style={styles.cardMeta}>
+                          <Text style={styles.cardType}>{item.structure} Sys.</Text>
+                          <View style={styles.dot} />
+                          <Text style={styles.cardDate}>
+                            {new Date(item.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
                           </Text>
                         </View>
-                      )}
+                        
+                        {item.location?.address ? (
+                          <View style={styles.locationRow}>
+                            <MapPin size={10} color={COLORS.primary} />
+                            <Text style={styles.locationText} numberOfLines={1}>
+                              {item.location.city || item.location.address}
+                            </Text>
+                          </View>
+                        ) : (
+                          // Transparent spacer line to maintain identical height across grid items
+                          <View style={[styles.locationRow, { opacity: 0 }]}>
+                            <MapPin size={10} color="transparent" />
+                            <Text style={styles.locationText}>Spacer</Text>
+                          </View>
+                        )}
+                      </View>
                       
                       <Text style={styles.cardValue}>{item.value.split(' ')[0]}</Text>
                     </View>
@@ -186,7 +200,7 @@ const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.background },
   header: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
-    paddingTop: 60, paddingHorizontal: SIZES.padding, marginBottom: SIZES.large,
+    paddingTop: 40, paddingHorizontal: SIZES.padding, marginBottom: SIZES.large,
   },
   title: { color: COLORS.text, fontSize: 28, fontWeight: '900', letterSpacing: -0.5 },
   subtitle: { color: COLORS.textSecondary, fontSize: 13, fontWeight: '600', marginTop: -2 },
@@ -201,11 +215,12 @@ const styles = StyleSheet.create({
   statCard: { flex: 1, paddingVertical: 16, alignItems: 'center' },
   statValue: { color: COLORS.text, fontSize: 22, fontWeight: '800', marginTop: 4 },
   statLabel: { color: COLORS.textSecondary, fontSize: 11, fontWeight: '600', textTransform: 'uppercase' },
-  searchRow: { flexDirection: 'row', gap: 12, marginBottom: 24 },
-  searchBar: { flex: 1, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, height: 50 },
-  searchInput: { flex: 1, marginLeft: 10, color: COLORS.text, fontSize: 15 },
+  searchRow: { flexDirection: 'row', gap: 12, marginBottom: 16 },
+  searchBar: { flex: 1, height: 44, justifyContent: 'center' },
+  searchInner: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, height: '100%' },
+  searchInput: { flex: 1, marginLeft: 10, color: COLORS.text, fontSize: SIZES.font },
   filterBtn: {
-    width: 50, height: 50, borderRadius: 12,
+    width: 44, height: 44, borderRadius: 12,
     backgroundColor: 'rgba(255,255,255,0.05)', justifyContent: 'center', alignItems: 'center',
     borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
   },
@@ -222,6 +237,7 @@ const styles = StyleSheet.create({
   cardImage: { width: '100%', height: 120 },
   listImage: { width: 100, height: '100%' },
   cardInfo: { padding: 12 },
+  gridCardInfo: { height: 110, justifyContent: 'space-between' },
   cardName: { color: COLORS.text, fontSize: 15, fontWeight: '700', marginBottom: 2 },
   cardMeta: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 },
   cardType: { color: COLORS.textSecondary, fontSize: 11 },

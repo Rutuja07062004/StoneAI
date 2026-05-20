@@ -14,8 +14,29 @@ import {
 } from 'lucide-react-native';
 import { SafeMap } from '@/components/ui/SafeMap';
 import { storageService, CollectionItem } from '@/services/storageService';
+import { getMineralImage } from '@/utils/getMineralImage';
 
 const { width } = Dimensions.get('window');
+
+interface SafeImageProps {
+  uri: string;
+  name: string;
+  style: any;
+}
+
+const SafeImage: React.FC<SafeImageProps> = ({ uri, name, style }) => {
+  const [hasError, setHasError] = useState(false);
+  const fallbackAsset = getMineralImage('Minerals', 'placeholder', false, name);
+
+  return (
+    <Image
+      source={hasError || !uri ? fallbackAsset : { uri }}
+      style={style}
+      contentFit="cover"
+      onError={() => setHasError(true)}
+    />
+  );
+};
 
 export default function CollectionDetailScreen() {
   const router = useRouter();
@@ -100,7 +121,7 @@ export default function CollectionDetailScreen() {
         
         {/* Main Info Card */}
         <View style={styles.imageWrapper}>
-          <Image source={{ uri: item.imageUri }} style={styles.resultImage} contentFit="cover" />
+          <SafeImage uri={item.imageUri} name={item.name} style={styles.resultImage} />
           <LinearGradient
             colors={['transparent', 'rgba(0,0,0,0.85)']}
             style={styles.imageOverlay}

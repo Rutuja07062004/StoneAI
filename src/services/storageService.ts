@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { GeminiMineralResult } from './geminiService';
+import * as FileSystem from 'expo-file-system/legacy';
 
 const COLLECTION_KEY = '@stone_ai_collection';
 
@@ -40,8 +41,34 @@ export const storageService = {
     try {
       const collection = await storageService.getCollection();
       
+      let permanentImageUri = item.imageUri;
+      if (item.imageUri && item.imageUri.startsWith('file://') && FileSystem.documentDirectory) {
+        try {
+          const filename = `scanned_${Date.now()}.jpg`;
+          const permanentDirectory = FileSystem.documentDirectory + 'scanned_images/';
+          
+          // Ensure directory exists
+          const dirInfo = await FileSystem.getInfoAsync(permanentDirectory);
+          if (!dirInfo.exists) {
+            await FileSystem.makeDirectoryAsync(permanentDirectory, { intermediates: true });
+          }
+          
+          const destinationUri = permanentDirectory + filename;
+          await FileSystem.copyAsync({
+            from: item.imageUri,
+            to: destinationUri
+          });
+          
+          permanentImageUri = destinationUri;
+          console.log('Saved scanned image permanently to:', permanentImageUri);
+        } catch (err) {
+          console.error('Failed to copy image to persistent storage:', err);
+        }
+      }
+      
       const newItem: CollectionItem = {
         ...item,
+        imageUri: permanentImageUri,
         id: Date.now().toString(),
         createdAt: new Date().toISOString(),
         isFavorite: false,

@@ -2,181 +2,2680 @@
   {
     "id": "1",
     "name": "Quartz",
-    "imageKey": "Quartz",
-    "type": "Silicate",
-    "hardness": "7.0",
-    "composition": "SiO₂",
-    "origin": "Worldwide",
-    "rarity": "Common",
-    "description": "Quartz is one of the most abundant minerals in Earth's crust. It is known for its hexagonal crystal structure and wide variety of colors.",
-    "uses": "Jewelry, glassmaking, electronics, pressure sensors.",
-    "marketValue": "$10 - $500 depending on specimen size and quality",
-    "image": "https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?q=80&w=1000&auto=format&fit=crop",
     "category": "Crystals",
-    "colors": ["Clear", "White", "Purple", "Pink", "Smoky"],
-    "funFacts": "Quartz crystals are used in watches because they vibrate at precise frequencies when an electric current is applied.",
-    "history": "Ancient Greeks believed quartz was ice that had frozen so hard it would never melt."
+    "subCategory": "Featured Specimen",
+    "hardness": "6.2",
+    "rarity": "Rare",
+    "description": "A beautiful Quartz specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "quartz"
   },
   {
     "id": "2",
     "name": "Amethyst",
-    "imageKey": "Amethyst",
-    "type": "Silicate (Quartz Variety)",
-    "hardness": "7.0",
-    "composition": "SiO₂ with trace amounts of iron",
-    "origin": "Brazil, Uruguay, Zambia",
-    "rarity": "Common",
-    "description": "Amethyst is the purple variety of quartz and is highly prized for its deep violet hue.",
-    "uses": "Gemstone jewelry, ornamental pieces, spiritual practices.",
-    "marketValue": "$20 - $2,000",
-    "image": "https://images.unsplash.com/photo-1567606401077-8a16827f300c?q=80&w=1000&auto=format&fit=crop",
     "category": "Crystals",
-    "colors": ["Purple", "Violet"],
-    "funFacts": "The name comes from the Ancient Greek word 'amethystos', meaning 'not intoxicated'.",
-    "history": "In ancient times, it was believed that wearing amethyst could prevent drunkenness."
+    "subCategory": "Featured Specimen",
+    "hardness": "8.3",
+    "rarity": "Rare",
+    "description": "A beautiful Amethyst specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "amethyst"
   },
   {
     "id": "3",
-    "name": "Ruby",
-    "imageKey": "Ruby",
-    "type": "Corundum",
-    "hardness": "9.0",
-    "composition": "Al₂O₃ with Chromium",
-    "origin": "Myanmar, Thailand, Sri Lanka, Mozambique",
+    "name": "Citrine",
+    "category": "Crystals",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.1",
     "rarity": "Rare",
-    "description": "Rubies are among the most valuable gemstones in the world, known for their intense red color and exceptional hardness.",
-    "uses": "High-end jewelry, precision lasers, industrial bearings.",
-    "marketValue": "$1,000 - $1,000,000+ per carat",
-    "image": "https://images.unsplash.com/photo-1588444839799-eb6bd4993f76?q=80&w=1000&auto=format&fit=crop",
-    "category": "Gemstones",
-    "colors": ["Red", "Pinkish-red"],
-    "funFacts": "The 'Sunrise Ruby' is the world's most expensive ruby, selling for over $30 million.",
-    "history": "In ancient Sanskrit, rubies were called 'ratnaraj', meaning 'king of precious stones'."
+    "description": "A beautiful Citrine specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "citrine"
   },
   {
     "id": "4",
-    "name": "Sapphire",
-    "imageKey": "Sapphire",
-    "type": "Corundum",
-    "hardness": "9.0",
-    "composition": "Al₂O₃ with Iron and Titanium",
-    "origin": "Kashmir, Sri Lanka, Madagascar, Australia",
+    "name": "Rose Quartz",
+    "category": "Crystals",
+    "subCategory": "Featured Specimen",
+    "hardness": "6.9",
     "rarity": "Rare",
-    "description": "Sapphire is a precious gemstone, a variety of the mineral corundum, consisting of aluminum oxide with trace amounts of elements such as iron, titanium, chromium, vanadium, or magnesium.",
-    "uses": "Jewelry, watch crystals, high-durability windows.",
-    "marketValue": "$500 - $50,000+ per carat",
-    "image": "https://images.unsplash.com/photo-1617117832626-1d9cc74be355?q=80&w=1000&auto=format&fit=crop",
-    "category": "Gemstones",
-    "colors": ["Blue", "Yellow", "Pink", "Orange", "Green"],
-    "funFacts": "The most famous sapphire is the 12-carat blue sapphire in Princess Diana's engagement ring.",
-    "history": "For centuries, sapphires have symbolized royalty, romance, and divine favor."
+    "description": "A beautiful Rose Quartz specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "rosequartz"
   },
   {
     "id": "5",
-    "name": "Obsidian",
-    "imageKey": "Obsidian",
-    "type": "Volcanic Glass",
-    "hardness": "5.0 - 6.0",
-    "composition": "70–75% SiO₂",
-    "origin": "Volcanic areas (Iceland, Mexico, USA)",
+    "name": "Apatite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.6",
     "rarity": "Common",
-    "description": "Obsidian is a naturally occurring volcanic glass formed when felsic lava extruded from a volcano cools rapidly with minimal crystal growth.",
-    "uses": "Scalpel blades, jewelry, ornamental items.",
-    "marketValue": "$5 - $100",
-    "image": "https://images.unsplash.com/photo-1502481851512-e9e2529bbbf9?q=80&w=1000&auto=format&fit=crop",
-    "category": "Igneous Rocks",
-    "colors": ["Black", "Green", "Brown", "Iridescent"],
-    "funFacts": "Obsidian can be fractured to produce a cutting edge thinner and sharper than a surgical steel scalpel.",
-    "history": "Pre-Columbian Mesoamericans used obsidian for weapons, tools, and decorative objects."
+    "description": "Apatite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   },
   {
     "id": "6",
-    "name": "Granite",
-    "imageKey": "Granite",
-    "type": "Intrusive Igneous",
-    "hardness": "6.0 - 7.0",
-    "composition": "Quartz, Feldspar, Mica",
-    "origin": "Continental crust worldwide",
-    "rarity": "Abundant",
-    "description": "Granite is a coarse-grained igneous rock composed mostly of quartz, alkali feldspar, and plagioclase.",
-    "uses": "Construction, countertops, monuments, curling stones.",
-    "marketValue": "Low (priced by weight/slab)",
-    "image": "https://images.unsplash.com/photo-1605100000000-000000000000?q=80&w=1000&auto=format&fit=crop",
-    "category": "Igneous Rocks",
-    "colors": ["Grey", "Pink", "White", "Black"],
-    "funFacts": "The base of the Statue of Liberty is made of granite from Stony Creek, Connecticut.",
-    "history": "Ancient Egyptians used granite to build some of their most iconic structures, including the pyramids."
+    "name": "Aquamarine",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.3",
+    "rarity": "Common",
+    "description": "Aquamarine is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   },
   {
     "id": "7",
-    "name": "Emerald",
-    "imageKey": "Emerald",
-    "type": "Beryl",
-    "hardness": "7.5 - 8.0",
-    "composition": "Be₃Al₂(SiO₃)₆ with Chromium",
-    "origin": "Colombia, Brazil, Zambia",
-    "rarity": "Very Rare",
-    "description": "Emerald is a gemstone and a variety of the mineral beryl colored green by trace amounts of chromium and sometimes vanadium.",
-    "uses": "High-end jewelry.",
-    "marketValue": "$2,000 - $100,000+ per carat",
-    "image": "https://images.unsplash.com/photo-1615111784767-4d99049942a1?q=80&w=1000&auto=format&fit=crop",
-    "category": "Gemstones",
-    "colors": ["Green"],
-    "funFacts": "Most emeralds have tiny fractures called 'jardin' (French for garden) that prove they are natural.",
-    "history": "Cleopatra was known for her love of emeralds and claimed all emerald mines in Egypt as her own."
+    "name": "Celestite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.7",
+    "rarity": "Common",
+    "description": "Celestite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   },
   {
     "id": "8",
-    "name": "Topaz",
-    "imageKey": "Topaz",
-    "type": "Silicate",
-    "hardness": "8.0",
-    "composition": "Al₂SiO₄(F,OH)₂",
-    "origin": "Brazil, Nigeria, Russia, USA",
-    "rarity": "Uncommon",
-    "description": "Topaz is a silicate mineral of aluminum and fluorine. It is one of the hardest naturally occurring minerals.",
-    "uses": "Gemstones, ornamental carvings.",
-    "marketValue": "$10 - $1,000 per carat (Imperial Topaz is most valuable)",
-    "image": "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1000&auto=format&fit=crop",
-    "category": "Minerals",
-    "colors": ["Yellow", "Blue", "Pink", "Colorless"],
-    "funFacts": "Pure topaz is colorless; the colors are caused by impurities or defects in the crystal structure.",
-    "history": "Ancient Greeks believed that topaz could increase strength and make the wearer invisible."
+    "name": "Danburite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.9",
+    "rarity": "Common",
+    "description": "Danburite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   },
   {
     "id": "9",
-    "name": "Opal",
-    "imageKey": "Opal",
-    "type": "Hydrated Silica",
-    "hardness": "5.5 - 6.5",
-    "composition": "SiO₂·nH₂O",
-    "origin": "Australia, Ethiopia, Mexico",
-    "rarity": "Rare",
-    "description": "Opal is a hydrated amorphous form of silica. Its internal structure makes it diffract light, resulting in a play of colors.",
-    "uses": "Jewelry, ornamental pieces.",
-    "marketValue": "$10 - $15,000 per carat",
-    "image": "https://images.unsplash.com/photo-1551101865-65bd048d0df0?q=80&w=1000&auto=format&fit=crop",
-    "category": "Minerals",
-    "colors": ["White", "Black", "Fire", "Multicolor"],
-    "funFacts": "Opal is the only gemstone that can contain up to 21% water within its structure.",
-    "history": "Arabic legends say that opals fall from the sky in flashes of lightning."
+    "name": "Fluorite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.5",
+    "rarity": "Common",
+    "description": "Fluorite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   },
   {
     "id": "10",
+    "name": "Goshenite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.2",
+    "rarity": "Common",
+    "description": "Goshenite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "11",
+    "name": "Heliodor",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.9",
+    "rarity": "Common",
+    "description": "Heliodor is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "12",
+    "name": "Kunzite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.7",
+    "rarity": "Common",
+    "description": "Kunzite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "13",
+    "name": "Lepidolite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.9",
+    "rarity": "Common",
+    "description": "Lepidolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "14",
+    "name": "Morganite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.9",
+    "rarity": "Common",
+    "description": "Morganite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "15",
+    "name": "Petalite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.9",
+    "rarity": "Common",
+    "description": "Petalite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "16",
+    "name": "Rhodonite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.5",
+    "rarity": "Common",
+    "description": "Rhodonite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "17",
+    "name": "Selenite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.8",
+    "rarity": "Common",
+    "description": "Selenite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "18",
+    "name": "Tanzanite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.4",
+    "rarity": "Common",
+    "description": "Tanzanite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "19",
+    "name": "Uvarovite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.2",
+    "rarity": "Common",
+    "description": "Uvarovite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "20",
+    "name": "Vanadinite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.3",
+    "rarity": "Common",
+    "description": "Vanadinite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "21",
+    "name": "Wulfenite",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.0",
+    "rarity": "Common",
+    "description": "Wulfenite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "22",
+    "name": "Zircon",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.3",
+    "rarity": "Common",
+    "description": "Zircon is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "23",
+    "name": "Ametrine",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.6",
+    "rarity": "Common",
+    "description": "Ametrine is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "24",
+    "name": "Beryl",
+    "category": "Crystals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.3",
+    "rarity": "Common",
+    "description": "Beryl is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "25",
+    "name": "Ruby",
+    "category": "Gemstones",
+    "subCategory": "Featured Specimen",
+    "hardness": "6.2",
+    "rarity": "Rare",
+    "description": "A beautiful Ruby specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "ruby"
+  },
+  {
+    "id": "26",
+    "name": "Sapphire",
+    "category": "Gemstones",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.5",
+    "rarity": "Rare",
+    "description": "A beautiful Sapphire specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "sapphire"
+  },
+  {
+    "id": "27",
+    "name": "Emerald",
+    "category": "Gemstones",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.6",
+    "rarity": "Rare",
+    "description": "A beautiful Emerald specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "emerald"
+  },
+  {
+    "id": "28",
+    "name": "Diamond",
+    "category": "Gemstones",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.3",
+    "rarity": "Rare",
+    "description": "A beautiful Diamond specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "diamond"
+  },
+  {
+    "id": "29",
+    "name": "Alexandrite",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Alexandrite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "30",
+    "name": "Garnet",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Garnet is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "31",
+    "name": "Opal",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.3",
+    "rarity": "Common",
+    "description": "Opal is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "32",
+    "name": "Pearl",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Pearl is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "33",
+    "name": "Peridot",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.9",
+    "rarity": "Common",
+    "description": "Peridot is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "34",
+    "name": "Spinel",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.5",
+    "rarity": "Common",
+    "description": "Spinel is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "35",
+    "name": "Topaz",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Topaz is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "36",
+    "name": "Turquoise",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.9",
+    "rarity": "Common",
+    "description": "Turquoise is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "37",
     "name": "Jade",
-    "imageKey": "Jade",
-    "type": "Nephrite or Jadeite",
-    "hardness": "6.0 - 7.0",
-    "composition": "Silicate minerals",
-    "origin": "Myanmar, China, Canada, New Zealand",
-    "rarity": "Uncommon",
-    "description": "Jade is an ornamental mineral, mostly known for its green varieties. It refers to two different silicate minerals: nephrite and jadeite.",
-    "uses": "Jewelry, figurines, cultural artifacts.",
-    "marketValue": "$5 - $3,000+ per carat (Imperial Jade is most expensive)",
-    "image": "https://images.unsplash.com/photo-1615111784767-4d99049942a1?q=80&w=1000&auto=format&fit=crop",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.2",
+    "rarity": "Common",
+    "description": "Jade is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "38",
+    "name": "Lapis Lazuli",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.0",
+    "rarity": "Common",
+    "description": "Lapis Lazuli is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "39",
+    "name": "Moonstone",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.0",
+    "rarity": "Common",
+    "description": "Moonstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "40",
+    "name": "Sunstone",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.2",
+    "rarity": "Common",
+    "description": "Sunstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "41",
+    "name": "Bloodstone",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.0",
+    "rarity": "Common",
+    "description": "Bloodstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "42",
+    "name": "Onyx",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.7",
+    "rarity": "Common",
+    "description": "Onyx is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "43",
+    "name": "Agate",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.3",
+    "rarity": "Common",
+    "description": "Agate is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "44",
+    "name": "Chrysoprase",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Chrysoprase is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "45",
+    "name": "Iolite",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Iolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "46",
+    "name": "Malachite",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.2",
+    "rarity": "Common",
+    "description": "Malachite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "47",
+    "name": "Rhodochrosite",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.0",
+    "rarity": "Common",
+    "description": "Rhodochrosite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "48",
+    "name": "Sugilite",
+    "category": "Gemstones",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.7",
+    "rarity": "Common",
+    "description": "Sugilite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "49",
+    "name": "Pyrite",
+    "category": "Minerals",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.6",
+    "rarity": "Rare",
+    "description": "A beautiful Pyrite specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "pyrite"
+  },
+  {
+    "id": "50",
+    "name": "Hematite",
+    "category": "Minerals",
+    "subCategory": "Featured Specimen",
+    "hardness": "5.4",
+    "rarity": "Rare",
+    "description": "A beautiful Hematite specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "hematite"
+  },
+  {
+    "id": "51",
+    "name": "Malachite",
+    "category": "Minerals",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.5",
+    "rarity": "Rare",
+    "description": "A beautiful Malachite specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "malachite"
+  },
+  {
+    "id": "52",
+    "name": "Actinolite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.0",
+    "rarity": "Common",
+    "description": "Actinolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "53",
+    "name": "Azurite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Azurite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "54",
+    "name": "Barite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.8",
+    "rarity": "Common",
+    "description": "Barite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "55",
+    "name": "Bauxite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.4",
+    "rarity": "Common",
+    "description": "Bauxite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "56",
+    "name": "Biotite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Biotite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "57",
+    "name": "Bornite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Bornite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "58",
+    "name": "Calcite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.5",
+    "rarity": "Common",
+    "description": "Calcite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "59",
+    "name": "Chalcopyrite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.6",
+    "rarity": "Common",
+    "description": "Chalcopyrite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "60",
+    "name": "Cinnabar",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Cinnabar is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "61",
+    "name": "Corundum",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Corundum is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "62",
+    "name": "Cuprite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.0",
+    "rarity": "Common",
+    "description": "Cuprite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "63",
+    "name": "Dolomite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.5",
+    "rarity": "Common",
+    "description": "Dolomite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "64",
+    "name": "Epidote",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.2",
+    "rarity": "Common",
+    "description": "Epidote is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "65",
+    "name": "Galena",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.4",
+    "rarity": "Common",
+    "description": "Galena is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "66",
+    "name": "Graphite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.8",
+    "rarity": "Common",
+    "description": "Graphite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "67",
+    "name": "Gypsum",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.9",
+    "rarity": "Common",
+    "description": "Gypsum is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "68",
+    "name": "Halite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.5",
+    "rarity": "Common",
+    "description": "Halite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "69",
+    "name": "Magnetite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.7",
+    "rarity": "Common",
+    "description": "Magnetite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "70",
+    "name": "Muscovite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.1",
+    "rarity": "Common",
+    "description": "Muscovite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "71",
+    "name": "Sphalerite",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.8",
+    "rarity": "Common",
+    "description": "Sphalerite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "72",
+    "name": "Talc",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.4",
+    "rarity": "Common",
+    "description": "Talc is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "73",
+    "name": "Tourmaline",
+    "category": "Minerals",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.0",
+    "rarity": "Common",
+    "description": "Tourmaline is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "74",
+    "name": "Granite",
+    "category": "Igneous Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.2",
+    "rarity": "Rare",
+    "description": "A beautiful Granite specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "granite"
+  },
+  {
+    "id": "75",
+    "name": "Basalt",
+    "category": "Igneous Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.6",
+    "rarity": "Rare",
+    "description": "A beautiful Basalt specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "basalt"
+  },
+  {
+    "id": "76",
+    "name": "Obsidian",
+    "category": "Igneous Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "8.0",
+    "rarity": "Rare",
+    "description": "A beautiful Obsidian specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "obsidian"
+  },
+  {
+    "id": "77",
+    "name": "Andesite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.1",
+    "rarity": "Common",
+    "description": "Andesite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "78",
+    "name": "Diorite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Diorite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "79",
+    "name": "Gabbro",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.4",
+    "rarity": "Common",
+    "description": "Gabbro is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "80",
+    "name": "Pegmatite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.1",
+    "rarity": "Common",
+    "description": "Pegmatite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "81",
+    "name": "Peridotite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.4",
+    "rarity": "Common",
+    "description": "Peridotite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "82",
+    "name": "Pumice",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.4",
+    "rarity": "Common",
+    "description": "Pumice is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "83",
+    "name": "Rhyolite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.4",
+    "rarity": "Common",
+    "description": "Rhyolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "84",
+    "name": "Scoria",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.3",
+    "rarity": "Common",
+    "description": "Scoria is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "85",
+    "name": "Syenite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.4",
+    "rarity": "Common",
+    "description": "Syenite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "86",
+    "name": "Tuff",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.9",
+    "rarity": "Common",
+    "description": "Tuff is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "87",
+    "name": "Dacite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.5",
+    "rarity": "Common",
+    "description": "Dacite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "88",
+    "name": "Kimberlite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.5",
+    "rarity": "Common",
+    "description": "Kimberlite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "89",
+    "name": "Komatite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.3",
+    "rarity": "Common",
+    "description": "Komatite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "90",
+    "name": "Monzonite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.9",
+    "rarity": "Common",
+    "description": "Monzonite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "91",
+    "name": "Obsidian Snowflake",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Obsidian Snowflake is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "92",
+    "name": "Phonolite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Phonolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "93",
+    "name": "Pitchstone",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Pitchstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "94",
+    "name": "Pyroxenite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.4",
+    "rarity": "Common",
+    "description": "Pyroxenite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "95",
+    "name": "Trachyte",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.6",
+    "rarity": "Common",
+    "description": "Trachyte is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "96",
+    "name": "Troctolite",
+    "category": "Igneous Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.6",
+    "rarity": "Common",
+    "description": "Troctolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "97",
+    "name": "Sandstone",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.8",
+    "rarity": "Rare",
+    "description": "A beautiful Sandstone specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "sandstone"
+  },
+  {
+    "id": "98",
+    "name": "Limestone",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.7",
+    "rarity": "Rare",
+    "description": "A beautiful Limestone specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "limestone"
+  },
+  {
+    "id": "99",
+    "name": "Breccia",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.1",
+    "rarity": "Common",
+    "description": "Breccia is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "100",
+    "name": "Chert",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.5",
+    "rarity": "Common",
+    "description": "Chert is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "101",
+    "name": "Coal",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.6",
+    "rarity": "Common",
+    "description": "Coal is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "102",
+    "name": "Conglomerate",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.3",
+    "rarity": "Common",
+    "description": "Conglomerate is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "103",
+    "name": "Diatomite",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.8",
+    "rarity": "Common",
+    "description": "Diatomite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "104",
+    "name": "Dolomite Rock",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.2",
+    "rarity": "Common",
+    "description": "Dolomite Rock is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "105",
+    "name": "Flint",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.7",
+    "rarity": "Common",
+    "description": "Flint is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "106",
+    "name": "Ironstone",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.4",
+    "rarity": "Common",
+    "description": "Ironstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "107",
+    "name": "Lignite",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.6",
+    "rarity": "Common",
+    "description": "Lignite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "108",
+    "name": "Oil Shale",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.6",
+    "rarity": "Common",
+    "description": "Oil Shale is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "109",
+    "name": "Oolite",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.3",
+    "rarity": "Common",
+    "description": "Oolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "110",
+    "name": "Rock Salt",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.3",
+    "rarity": "Common",
+    "description": "Rock Salt is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "111",
+    "name": "Shale",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.3",
+    "rarity": "Common",
+    "description": "Shale is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "112",
+    "name": "Siltstone",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.3",
+    "rarity": "Common",
+    "description": "Siltstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "113",
+    "name": "Travertine",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.7",
+    "rarity": "Common",
+    "description": "Travertine is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "114",
+    "name": "Chalk",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.3",
+    "rarity": "Common",
+    "description": "Chalk is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "115",
+    "name": "Coquina",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.4",
+    "rarity": "Common",
+    "description": "Coquina is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "116",
+    "name": "Geyserite",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.6",
+    "rarity": "Common",
+    "description": "Geyserite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "117",
+    "name": "Greywacke",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.4",
+    "rarity": "Common",
+    "description": "Greywacke is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "118",
+    "name": "Marl",
+    "category": "Sedimentary Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.4",
+    "rarity": "Common",
+    "description": "Marl is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "119",
+    "name": "Marble",
     "category": "Metamorphic Rocks",
-    "colors": ["Green", "White", "Lavender", "Red", "Yellow"],
-    "funFacts": "Jade is exceptionally tough and was used for axe heads and weapons in prehistoric times.",
-    "history": "In Chinese culture, jade is considered the 'Imperial Gem' and is associated with immortality and luck."
+    "subCategory": "Featured Specimen",
+    "hardness": "8.5",
+    "rarity": "Rare",
+    "description": "A beautiful Marble specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "marble"
+  },
+  {
+    "id": "120",
+    "name": "Slate",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "6.6",
+    "rarity": "Rare",
+    "description": "A beautiful Slate specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "slate"
+  },
+  {
+    "id": "121",
+    "name": "Gneiss",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Featured Specimen",
+    "hardness": "7.9",
+    "rarity": "Rare",
+    "description": "A beautiful Gneiss specimen known for its distinctive geological properties and widespread use.",
+    "origin": "Worldwide",
+    "uses": [
+      "Jewelry",
+      "Collectibles",
+      "Display"
+    ],
+    "featured": true,
+    "trending": true,
+    "hasRealImage": true,
+    "imageKey": "gneiss"
+  },
+  {
+    "id": "122",
+    "name": "Amphibolite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.7",
+    "rarity": "Common",
+    "description": "Amphibolite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "123",
+    "name": "Anthracite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.7",
+    "rarity": "Common",
+    "description": "Anthracite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "124",
+    "name": "Eclogite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.5",
+    "rarity": "Common",
+    "description": "Eclogite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "125",
+    "name": "Epidosite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.7",
+    "rarity": "Common",
+    "description": "Epidosite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "126",
+    "name": "Hornfels",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.9",
+    "rarity": "Common",
+    "description": "Hornfels is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "127",
+    "name": "Migmatite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.7",
+    "rarity": "Common",
+    "description": "Migmatite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "128",
+    "name": "Mylonite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.4",
+    "rarity": "Common",
+    "description": "Mylonite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "129",
+    "name": "Novaculite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.3",
+    "rarity": "Common",
+    "description": "Novaculite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "130",
+    "name": "Phyllite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.9",
+    "rarity": "Common",
+    "description": "Phyllite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "131",
+    "name": "Quartzite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.6",
+    "rarity": "Common",
+    "description": "Quartzite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "132",
+    "name": "Schist",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.1",
+    "rarity": "Common",
+    "description": "Schist is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "133",
+    "name": "Serpentinite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "2.3",
+    "rarity": "Common",
+    "description": "Serpentinite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "134",
+    "name": "Skarn",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.2",
+    "rarity": "Common",
+    "description": "Skarn is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "135",
+    "name": "Soapstone",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.7",
+    "rarity": "Common",
+    "description": "Soapstone is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "136",
+    "name": "Greenschist",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.2",
+    "rarity": "Common",
+    "description": "Greenschist is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "137",
+    "name": "Blueschist",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "6.6",
+    "rarity": "Common",
+    "description": "Blueschist is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "138",
+    "name": "Granulite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "5.2",
+    "rarity": "Common",
+    "description": "Granulite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "139",
+    "name": "Litchfieldite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "7.9",
+    "rarity": "Common",
+    "description": "Litchfieldite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "140",
+    "name": "Tactite",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "3.8",
+    "rarity": "Common",
+    "description": "Tactite is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
+  },
+  {
+    "id": "141",
+    "name": "Metaconglomerate",
+    "category": "Metamorphic Rocks",
+    "subCategory": "Standard Specimen",
+    "hardness": "4.0",
+    "rarity": "Common",
+    "description": "Metaconglomerate is a fascinating geological formation found in various parts of the world, often studied for its unique structure.",
+    "origin": "Various Locations",
+    "uses": [
+      "Research",
+      "Collection",
+      "Industrial"
+    ],
+    "featured": false,
+    "trending": false,
+    "hasRealImage": false,
+    "imageKey": "placeholder"
   }
 ]

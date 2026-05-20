@@ -11,7 +11,7 @@ const mineralSchema = new mongoose.Schema(
     category: {
       type: String,
       required: [true, 'Category is required'],
-      enum: ['Crystals', 'Minerals', 'Gemstones', 'Igneous', 'Sedimentary', 'Metamorphic'],
+      enum: ['Crystals', 'Minerals', 'Gemstones', 'Igneous Rocks', 'Sedimentary Rocks', 'Metamorphic Rocks'],
       index: true,
     },
     subCategory: {
@@ -19,9 +19,7 @@ const mineralSchema = new mongoose.Schema(
       trim: true,
     },
     hardness: {
-      type: Number,
-      min: 1,
-      max: 10,
+      type: String,
     },
     rarity: {
       type: String,
@@ -38,13 +36,12 @@ const mineralSchema = new mongoose.Schema(
       type: [String],
       default: [],
     },
-    image: {
-      type: String,
-      default: '',
+    hasRealImage: {
+      type: Boolean,
+      default: false,
     },
-    gallery: {
-      type: [String],
-      default: [],
+    imageKey: {
+      type: String,
     },
     trending: {
       type: Boolean,
@@ -54,19 +51,6 @@ const mineralSchema = new mongoose.Schema(
     featured: {
       type: Boolean,
       default: false,
-    },
-    chemicalFormula: {
-      type: String,
-    },
-    crystalSystem: {
-      type: String,
-    },
-    luster: {
-      type: String,
-    },
-    color: {
-      type: [String],
-      default: [],
     },
   },
   {

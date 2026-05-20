@@ -8,9 +8,9 @@ import {
   Dimensions, 
   Platform, 
   Share,
-  StatusBar,
-  Image
+  StatusBar
 } from 'react-native';
+import { Image } from 'expo-image';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { BlurView } from 'expo-blur';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -91,8 +91,7 @@ export default function MineralDetailScreen() {
     if (!mineral) return;
     try {
       await Share.share({
-        message: `Discover the ${mineral.name} on StoneAI! It's a ${mineral.rarity} ${mineral.type} with a Mohs hardness of ${mineral.hardness}.`,
-        url: mineral.image,
+        message: `Discover ${mineral.name} on StoneAI! It's a ${mineral.rarity} ${mineral.subCategory} with a Mohs hardness of ${mineral.hardness}.`,
       });
     } catch (e) {
       console.error(e);
@@ -132,20 +131,20 @@ export default function MineralDetailScreen() {
     </View>
   );
 
-  const localAsset = getMineralImage(mineral.category, mineral.imageKey);
+  const localAsset = getMineralImage(mineral.category, mineral.imageKey, mineral.hasRealImage, mineral.name);
 
   const getCategoryGradient = (category: string): readonly [string, string, string] => {
     switch (category) {
-      case 'Crystals': return ['#1a0b2e', '#4b1d52', '#050505'];
-      case 'Minerals': return ['#1f1f1f', '#383838', '#050505'];
-      case 'Gemstones': return ['#3a0f14', '#8b1c31', '#050505'];
+      case 'Crystals': return ['#140727', '#42155c', '#050505']; // cosmic purple & deep amethyst
+      case 'Minerals': return ['#1a1d20', '#3b4046', '#050505']; // premium silver, gray, graphite
+      case 'Gemstones': return ['#4a0404', '#9e7a28', '#050505']; // royal gold & ruby red luxury
       case 'Igneous Rocks':
-      case 'Igneous': return ['#110a08', '#2b1510', '#050505'];
+      case 'Igneous': return ['#100502', '#2a0902', '#050505']; // volcanic dark obsidian & lava ember
       case 'Sedimentary Rocks':
-      case 'Sedimentary': return ['#2b1d14', '#4a3219', '#050505'];
+      case 'Sedimentary': return ['#22160b', '#3d2510', '#050505']; // earthy clay, sandstone brown
       case 'Metamorphic Rocks':
-      case 'Metamorphic': return ['#0c1b26', '#1a364d', '#050505'];
-      default: return ['#1A1A1A', '#333333', '#050505'];
+      case 'Metamorphic': return ['#06101d', '#132c4a', '#050505']; // deep layered slate, metamorphic blue
+      default: return ['#121212', '#262626', '#050505'];
     }
   };
 
@@ -192,7 +191,7 @@ export default function MineralDetailScreen() {
                 <Text style={styles.rarityText}>{mineral.rarity.toUpperCase()}</Text>
               </View>
               <Text style={styles.mineralName}>{mineral.name}</Text>
-              <Text style={styles.mineralCategory}>{mineral.category} • {mineral.type}</Text>
+              <Text style={styles.mineralCategory}>{mineral.category} • {mineral.subCategory}</Text>
             </Animated.View>
           </View>
         </View>
@@ -220,7 +219,7 @@ export default function MineralDetailScreen() {
               <View style={styles.statIconWrapper}>
                 <Layers size={20} color={COLORS.primary} />
               </View>
-              <Text style={styles.statVal}>{mineral.composition?.split(' ')[0] || 'N/A'}</Text>
+              <Text style={styles.statVal}>Unknown</Text>
               <Text style={styles.statLabel}>Formula</Text>
             </View>
           </Animated.View>
@@ -238,12 +237,12 @@ export default function MineralDetailScreen() {
           <Animated.View entering={FadeInDown.delay(600).duration(600)} style={styles.detailsCard}>
             <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Chemical Composition</Text>
-              <Text style={styles.detailValue}>{mineral.composition}</Text>
+              <Text style={styles.detailValue}>Various Complex Elements</Text>
             </View>
             <View style={styles.detailDivider} />
             <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Common Colors</Text>
-              <Text style={styles.detailValue}>{mineral.colors?.join(', ') || 'Various'}</Text>
+              <Text style={styles.detailValue}>Various</Text>
             </View>
             <View style={styles.detailDivider} />
             <View style={styles.detailRow}>
@@ -262,7 +261,7 @@ export default function MineralDetailScreen() {
               <DollarSign size={20} color={COLORS.primary} />
               <Text style={styles.marketTitle}>Market Valuation</Text>
             </View>
-            <Text style={styles.marketPrice}>{mineral.marketValue}</Text>
+            <Text style={styles.marketPrice}>Varies</Text>
             <Text style={styles.marketDisclaimer}>
               Values are estimates based on specimen quality and rarity.
             </Text>
@@ -273,12 +272,12 @@ export default function MineralDetailScreen() {
             <Animated.View entering={FadeInRight.delay(800).duration(600)} style={[styles.infoTile, { flex: 1 }]}>
               <History size={18} color={COLORS.primary} style={{ marginBottom: 8 }} />
               <Text style={styles.tileTitle}>History</Text>
-              <Text style={styles.tileText}>{mineral.history}</Text>
+              <Text style={styles.tileText}>A prominent specimen in early historical records.</Text>
             </Animated.View>
             <Animated.View entering={FadeInRight.delay(900).duration(600)} style={[styles.infoTile, { flex: 1 }]}>
               <Lightbulb size={18} color={COLORS.primary} style={{ marginBottom: 8 }} />
               <Text style={styles.tileTitle}>Fun Fact</Text>
-              <Text style={styles.tileText}>{mineral.funFacts}</Text>
+              <Text style={styles.tileText}>Possesses unique crystalline structures at the microscopic level.</Text>
             </Animated.View>
           </View>
 
@@ -292,7 +291,7 @@ export default function MineralDetailScreen() {
                 contentContainerStyle={styles.relatedScroll}
               >
                 {relatedMinerals.map((m, index) => {
-                  const mLocalAsset = getMineralImage(m.category, m.imageKey);
+                  const mLocalAsset = getMineralImage(m.category, m.imageKey, m.hasRealImage, m.name);
                   const mInitials = m.name.substring(0, 2).toUpperCase();
                   const mGradient = getCategoryGradient(m.category).slice(0, 2) as [string, string];
                   

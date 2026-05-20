@@ -4,56 +4,51 @@ import { gemstoneImages } from '../constants/gemstoneImages';
 import { igneousImages } from '../constants/igneousImages';
 import { sedimentaryImages } from '../constants/sedimentaryImages';
 import { metamorphicImages } from '../constants/metamorphicImages';
-import { MineralCategory } from '../types/mineral';
 
-export const getMineralImage = (category: MineralCategory | string, imageKey: string) => {
-  if (!category || !imageKey) {
-    return null; // Return null to trigger the "No Image" fallback
+export const getMineralImage = (category: string, imageKey: string, hasRealImage: boolean, name?: string) => {
+  const normalizedCategory = category || 'Minerals';
+  
+  // If we have a verified unique image asset
+  if (hasRealImage && imageKey && imageKey !== 'placeholder') {
+    const normalizedKey = imageKey.toLowerCase().replace(/\s/g, '').replace(/-/g, '');
+    let asset = null;
+    switch (normalizedCategory) {
+      case 'Crystals': asset = crystalImages[normalizedKey]; break;
+      case 'Minerals': asset = mineralImages[normalizedKey]; break;
+      case 'Gemstones': asset = gemstoneImages[normalizedKey]; break;
+      case 'Igneous Rocks': case 'Igneous': asset = igneousImages[normalizedKey]; break;
+      case 'Sedimentary Rocks': case 'Sedimentary': asset = sedimentaryImages[normalizedKey]; break;
+      case 'Metamorphic Rocks': case 'Metamorphic': asset = metamorphicImages[normalizedKey]; break;
+    }
+    if (asset) return asset;
   }
 
-  console.log('--- Debug Mineral Image ---');
-  console.log('Name/Key:', imageKey);
-  console.log('Category:', category);
+  // Fallback: Use name hash to pick a real image from the corresponding category folder
+  const getCategoryImagesList = (cat: string): any[] => {
+    switch (cat) {
+      case 'Crystals': return Object.values(crystalImages);
+      case 'Minerals': return Object.values(mineralImages);
+      case 'Gemstones': return Object.values(gemstoneImages);
+      case 'Igneous Rocks': case 'Igneous': return Object.values(igneousImages);
+      case 'Sedimentary Rocks': case 'Sedimentary': return Object.values(sedimentaryImages);
+      case 'Metamorphic Rocks': case 'Metamorphic': return Object.values(metamorphicImages);
+      default: return Object.values(mineralImages);
+    }
+  };
 
-  const normalizedKey = imageKey.toLowerCase().replace(/\s/g, '').replace(/-/g, '');
-  console.log('Normalized Key:', normalizedKey);
+  const getSimpleHash = (str: string): number => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash);
+  };
 
-  let asset: any = null;
-
-  switch (category) {
-    case 'Crystals':
-      asset = crystalImages[normalizedKey];
-      break;
-    case 'Minerals':
-      asset = mineralImages[normalizedKey];
-      break;
-    case 'Gemstones':
-      asset = gemstoneImages[normalizedKey];
-      break;
-    case 'Igneous Rocks':
-    case 'Igneous':
-      asset = igneousImages[normalizedKey];
-      break;
-    case 'Sedimentary Rocks':
-    case 'Sedimentary':
-      asset = sedimentaryImages[normalizedKey];
-      break;
-    case 'Metamorphic Rocks':
-    case 'Metamorphic':
-      asset = metamorphicImages[normalizedKey];
-      break;
+  const list = getCategoryImagesList(normalizedCategory);
+  if (list && list.length > 0) {
+    const hash = getSimpleHash(name || imageKey || 'default');
+    return list[hash % list.length];
   }
 
-  // Cross-category fallback: If backend categorization doesn't perfectly match our asset folders
-  if (!asset) {
-    asset = crystalImages[normalizedKey] 
-         || mineralImages[normalizedKey] 
-         || gemstoneImages[normalizedKey] 
-         || igneousImages[normalizedKey] 
-         || sedimentaryImages[normalizedKey] 
-         || metamorphicImages[normalizedKey] 
-         || null;
-  }
-
-  return asset;
+  return null;
 };

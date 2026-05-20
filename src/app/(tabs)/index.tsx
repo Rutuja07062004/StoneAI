@@ -6,14 +6,14 @@ import {
   ScrollView,
   TextInput,
   TouchableOpacity,
-  Image,
   ActivityIndicator,
 } from 'react-native';
+import { Image } from 'expo-image';
 import { COLORS, SIZES } from '@/constants/theme';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
-  Search, Bell, Sparkles, TrendingUp, Clock,
+  Search, Sparkles, TrendingUp, Clock,
   Gem, Mountain, Flame, Layers, Box
 } from 'lucide-react-native';
 import { useRouter } from 'expo-router';
@@ -21,6 +21,7 @@ import { getRandomFact } from '@/data/mineralFacts';
 import { mineralApiService } from '@/services/mineralApiService';
 import { Mineral } from '@/types/mineral';
 import { getMineralImage } from '@/utils/getMineralImage';
+import { useAuth } from '@/context/AuthContext';
 
 const CATEGORIES = [
   { id: '1', name: 'Crystals', Icon: Gem },
@@ -41,6 +42,7 @@ const RARITY_COLORS: Record<string, string> = {
 
 export default function HomeDashboard() {
   const router = useRouter();
+  const { user } = useAuth();
   const [dailyFact, setDailyFact] = useState<string>('');
   const [trendingMinerals, setTrendingMinerals] = useState<Mineral[]>([]);
   const [recentMinerals, setRecentMinerals] = useState<Mineral[]>([]);
@@ -68,7 +70,7 @@ export default function HomeDashboard() {
   };
 
   const renderMineralCard = (mineral: Mineral) => {
-    const localAsset = getMineralImage(mineral.category, mineral.imageKey);
+    const localAsset = getMineralImage(mineral.category, mineral.imageKey, mineral.hasRealImage, mineral.name);
     return (
       <TouchableOpacity
         key={mineral.id}
@@ -90,7 +92,7 @@ export default function HomeDashboard() {
           )}
           <View style={styles.mineralInfo}>
             <Text style={styles.mineralName} numberOfLines={1}>{mineral.name}</Text>
-            <Text style={styles.mineralType} numberOfLines={1}>{mineral.type}</Text>
+            <Text style={styles.mineralType} numberOfLines={1}>{mineral.subCategory}</Text>
             <View style={styles.mineralMeta}>
               <View style={[styles.rarityBadge, { backgroundColor: (RARITY_COLORS[mineral.rarity] || '#9CA3AF') + '22' }]}>
                 <Text style={[styles.rarityText, { color: RARITY_COLORS[mineral.rarity] || '#9CA3AF' }]}>
@@ -106,7 +108,7 @@ export default function HomeDashboard() {
   };
 
   const renderSmallCard = (mineral: Mineral) => {
-    const localAsset = getMineralImage(mineral.category, mineral.imageKey);
+    const localAsset = getMineralImage(mineral.category, mineral.imageKey, mineral.hasRealImage, mineral.name);
     return (
       <TouchableOpacity
         key={mineral.id}
@@ -148,14 +150,10 @@ export default function HomeDashboard() {
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
         {/* Header */}
         <View style={styles.header}>
-          <View>
+          <View style={styles.headerTextRow}>
             <Text style={styles.welcomeText}>Hello,</Text>
-            <Text style={styles.userName}>Welcome Back</Text>
+            <Text style={styles.userName}>{user?.name || 'Explorer'}</Text>
           </View>
-          <TouchableOpacity style={styles.notificationBtn}>
-            <Bell size={24} color={COLORS.text} />
-            <View style={styles.badge} />
-          </TouchableOpacity>
         </View>
 
         {/* Search Bar */}
@@ -163,9 +161,9 @@ export default function HomeDashboard() {
           activeOpacity={0.8}
           onPress={() => router.push('/guide')}
         >
-          <GlassCard style={styles.searchCard} padding={0}>
+          <GlassCard style={styles.searchCard} padding={0} borderRadius={12}>
             <View style={styles.searchInner}>
-              <Search size={20} color={COLORS.textSecondary} />
+              <Search size={18} color={COLORS.textSecondary} />
               <Text style={styles.searchPlaceholder}>Search minerals, crystals...</Text>
             </View>
           </GlassCard>
@@ -271,7 +269,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row', justifyContent: 'space-between',
     alignItems: 'center', marginBottom: SIZES.extraLarge,
   },
-  welcomeText: { color: COLORS.textSecondary, fontSize: SIZES.medium },
+  headerTextRow: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    gap: 6,
+  },
+  welcomeText: { color: COLORS.text, fontSize: SIZES.extraLarge, fontWeight: '800' },
   userName: { color: COLORS.text, fontSize: SIZES.extraLarge, fontWeight: '800' },
   notificationBtn: {
     width: 48, height: 48, borderRadius: 24,
@@ -283,9 +286,9 @@ const styles = StyleSheet.create({
     width: 10, height: 10, borderRadius: 5,
     backgroundColor: COLORS.primary, borderWidth: 2, borderColor: COLORS.surface,
   },
-  searchCard: { marginBottom: SIZES.extraLarge, height: 54, justifyContent: 'center' },
+  searchCard: { marginBottom: 16, height: 44, justifyContent: 'center' },
   searchInner: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, height: '100%' },
-  searchPlaceholder: { flex: 1, marginLeft: 12, color: COLORS.textMuted, fontSize: SIZES.medium },
+  searchPlaceholder: { flex: 1, marginLeft: 10, color: COLORS.textMuted, fontSize: SIZES.font },
   dailyFactCard: { padding: SIZES.padding, borderRadius: SIZES.radius, marginBottom: SIZES.extraLarge },
   factHeader: { flexDirection: 'row', alignItems: 'center', marginBottom: SIZES.base },
   factTitle: { color: COLORS.background, fontSize: SIZES.medium, fontWeight: '800', marginLeft: 8 },

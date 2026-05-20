@@ -62,7 +62,8 @@ export const useMinerals = () => {
         !searchQuery ||
         mineral.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         mineral.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        mineral.type.toLowerCase().includes(searchQuery.toLowerCase());
+        mineral.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        mineral.subCategory.toLowerCase().includes(searchQuery.toLowerCase());
 
       const matchesCategory =
         selectedCategory === 'All' || mineral.category === selectedCategory;
@@ -75,8 +76,8 @@ export const useMinerals = () => {
         activeFilters.hardness.length === 0 ||
         activeFilters.hardness.some(range => {
           const [min, max] = range.split('-').map(Number);
-          const val = parseFloat(mineral.hardness);
-          return val >= min && (max ? val <= max : true);
+          const val = typeof mineral.hardness === 'number' ? mineral.hardness : parseFloat(mineral.hardness);
+          return !isNaN(val) && val >= min && (max ? val <= max : true);
         });
 
       return matchesSearch && matchesCategory && matchesRarity && matchesHardness;

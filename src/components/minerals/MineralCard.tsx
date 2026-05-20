@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { Image } from 'expo-image';
 import { BlurView } from 'expo-blur';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Heart, Diamond, Info, Gem } from 'lucide-react-native';
@@ -34,20 +35,20 @@ export const MineralCard: React.FC<MineralCardProps> = ({
   customStyle
 }) => {
   const isList = viewMode === 'list';
-  const localAsset = getMineralImage(mineral.category, mineral.imageKey);
+  const localAsset = getMineralImage(mineral.category, mineral.imageKey, mineral.hasRealImage, mineral.name);
 
   const getCategoryGradient = (category: string): readonly [string, string] => {
     switch (category) {
-      case 'Crystals': return ['#1a0b2e', '#4b1d52'];
-      case 'Minerals': return ['#1f1f1f', '#383838'];
-      case 'Gemstones': return ['#3a0f14', '#8b1c31'];
+      case 'Crystals': return ['#140727', '#42155c']; // cosmic purple & deep amethyst
+      case 'Minerals': return ['#1a1d20', '#3b4046']; // premium silver, gray, graphite
+      case 'Gemstones': return ['#4a0404', '#9e7a28']; // royal gold & ruby red luxury
       case 'Igneous Rocks':
-      case 'Igneous': return ['#110a08', '#2b1510'];
+      case 'Igneous': return ['#100502', '#2a0902']; // volcanic dark obsidian & lava ember
       case 'Sedimentary Rocks':
-      case 'Sedimentary': return ['#2b1d14', '#4a3219'];
+      case 'Sedimentary': return ['#22160b', '#3d2510']; // earthy clay, sandstone brown
       case 'Metamorphic Rocks':
-      case 'Metamorphic': return ['#0c1b26', '#1a364d'];
-      default: return ['#1A1A1A', '#050505'];
+      case 'Metamorphic': return ['#06101d', '#132c4a']; // deep layered slate, metamorphic blue
+      default: return ['#121212', '#262626'];
     }
   };
 
@@ -68,10 +69,10 @@ export const MineralCard: React.FC<MineralCardProps> = ({
 
     return (
       <LinearGradient colors={gradient} style={[styles.fullImage, { justifyContent: 'center', alignItems: 'center' }]}>
-        <Text style={{ color: 'rgba(255,255,255,0.08)', fontSize: 60, fontWeight: '900', position: 'absolute' }}>
+        <Text style={{ color: 'rgba(255,255,255,0.1)', fontSize: 60, fontWeight: '900', position: 'absolute' }}>
           {initials}
         </Text>
-        <Gem size={28} color="rgba(255,255,255,0.4)" />
+        <Gem size={28} color="rgba(255,255,255,0.6)" />
       </LinearGradient>
     );
   };

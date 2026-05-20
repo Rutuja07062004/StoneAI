@@ -118,7 +118,7 @@ export default function ExploreScreen() {
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={minerals.filter(m => m.isTrending)}
+            data={minerals.filter(m => m.trending)}
             keyExtractor={item => `trending-${item.id}`}
             renderItem={({ item, index }) => (
               <MineralCard
@@ -145,7 +145,7 @@ export default function ExploreScreen() {
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={minerals.filter(m => m.category === 'Gemstones' && m.isTrending)}
+            data={minerals.filter(m => m.category === 'Gemstones' && m.trending)}
             keyExtractor={item => `featured-gem-${item.id}`}
             renderItem={({ item, index }) => (
               <MineralCard
@@ -172,7 +172,7 @@ export default function ExploreScreen() {
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={minerals.filter(m => m.category === 'Igneous Rocks' && m.isTrending)}
+            data={minerals.filter(m => m.category === 'Igneous Rocks' && m.trending)}
             keyExtractor={item => `featured-ign-${item.id}`}
             renderItem={({ item, index }) => (
               <MineralCard
@@ -199,7 +199,7 @@ export default function ExploreScreen() {
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={minerals.filter(m => m.category === 'Sedimentary Rocks' && m.isTrending)}
+            data={minerals.filter(m => m.category === 'Sedimentary Rocks' && m.trending)}
             keyExtractor={item => `featured-sed-${item.id}`}
             renderItem={({ item, index }) => (
               <MineralCard
@@ -226,7 +226,7 @@ export default function ExploreScreen() {
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
-            data={minerals.filter(m => m.category === 'Metamorphic Rocks' && m.isTrending)}
+            data={minerals.filter(m => m.category === 'Metamorphic Rocks' && m.trending)}
             keyExtractor={item => `featured-meta-${item.id}`}
             renderItem={({ item, index }) => (
               <MineralCard
@@ -318,6 +318,10 @@ export default function ExploreScreen() {
           ListEmptyComponent={renderEmptyState}
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}
+          initialNumToRender={8}
+          maxToRenderPerBatch={10}
+          windowSize={5}
+          removeClippedSubviews={true}
         />
       )}
 
