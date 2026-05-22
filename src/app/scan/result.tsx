@@ -157,7 +157,7 @@ export default function RockResultScreen() {
 
         {/* Scanned Photo */}
         <View style={styles.imageWrapper}>
-          <Image source={imageSource} style={styles.resultImage} resizeMode="cover" />
+          <Image source={imageSource} style={styles.resultImage} contentFit="cover" />
           <LinearGradient
             colors={['transparent', 'rgba(0,0,0,0.85)']}
             style={styles.imageOverlay}

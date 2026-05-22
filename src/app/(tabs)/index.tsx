@@ -83,7 +83,7 @@ export default function HomeDashboard() {
             <Image
               source={localAsset}
               style={styles.mineralImage}
-              resizeMode="cover"
+              contentFit="cover"
             />
           ) : (
             <View style={[styles.mineralImage, { backgroundColor: '#1A1A1A', justifyContent: 'center', alignItems: 'center' }]}>
@@ -122,7 +122,7 @@ export default function HomeDashboard() {
               <Image
                 source={localAsset}
                 style={styles.smallImage}
-                resizeMode="cover"
+                contentFit="cover"
               />
             ) : (
               <View style={[styles.smallImage, { backgroundColor: '#1A1A1A', justifyContent: 'center', alignItems: 'center' }]}>

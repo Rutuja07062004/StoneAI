@@ -58,7 +58,7 @@ export const MineralCard: React.FC<MineralCardProps> = ({
         <Image
           source={localAsset}
           style={styles.fullImage}
-          resizeMode="cover"
+          contentFit="cover"
         />
       );
     }

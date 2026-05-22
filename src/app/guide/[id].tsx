@@ -168,7 +168,7 @@ export default function MineralDetailScreen() {
               <Image 
                 source={localAsset} 
                 style={styles.heroImage} 
-                resizeMode="cover"
+                contentFit="cover"
               />
             ) : (
               <LinearGradient colors={gradient} style={[styles.heroImage, { justifyContent: 'center', alignItems: 'center' }]}>
@@ -305,7 +305,7 @@ export default function MineralDetailScreen() {
                         <Image 
                           source={mLocalAsset} 
                           style={styles.relatedImg} 
-                          resizeMode="cover" 
+                          contentFit="cover" 
                         />
                       ) : (
                         <LinearGradient colors={mGradient} style={[styles.relatedImg, { justifyContent: 'center', alignItems: 'center' }]}>
