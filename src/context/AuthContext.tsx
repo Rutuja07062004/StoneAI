@@ -7,6 +7,7 @@ interface User {
   name: string;
   email: string;
   createdAt: string;
+  avatar?: string;
 }
 
 interface AuthContextData {
@@ -16,6 +17,7 @@ interface AuthContextData {
   login: (email: string, password: string) => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
+  updateProfile: (data: { name?: string; avatar?: string }) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
@@ -77,6 +79,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUser(null);
   };
 
+  const updateProfile = async (data: { name?: string; avatar?: string }) => {
+    try {
+      const response = await api.put('/auth/profile', data);
+      const { user: userData } = response.data;
+
+      await authStorage.saveUser(userData);
+      setUser(userData);
+    } catch (error: any) {
+      throw new Error(error.response?.data?.message || 'Profile update failed');
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -86,6 +100,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         login,
         register,
         logout,
+        updateProfile,
       }}
     >
       {children}
